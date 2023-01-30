@@ -2,7 +2,7 @@
 	$db_server="localhost";
 	$db_uname="root";
 	$db_pass="";
-	$db_name="Myself";
+	$db_name="myself";
 
 	
 	

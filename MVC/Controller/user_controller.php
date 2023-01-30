@@ -1,11 +1,10 @@
 <?php
-	include 'Model/db_config.php';
+	include 'C:\\xampp\htdocs\Myself\Myself-v2\MVC\Model\db_config.php';
 	
 	$fname="";
 	$err_fname="";
     $lname="";
 	$err_lname="";
-	
 	$uname="";
 	$err_uname="";
 	$pass="";
@@ -18,7 +17,14 @@
 			$err_fname = "First Name Required";
 		}
 		else{
-			$name = $_POST["fname"];
+			$fname = $_POST["fname"];
+		}
+        if(empty($_POST["lname"])){
+			$hasError  = true;
+			$err_fname = "Last Name Required";
+		}
+		else{
+			$fname = $_POST["lname"];
 		}
 		if(empty($_POST["uname"])){
 			$hasError  = true;
@@ -29,9 +35,9 @@
 		}
 		//do others
 		if(!$hasError){
-			$rs = insertUser($name,$uname,$_POST["email"],$_POST["pass"]);
+			$rs = insertUser($fname,$lname,$uname,$_POST["email"],$_POST["pass"]);
 			if($rs === true){
-				header("Location: login.php");
+				header("Location: login.html");
 			}
 			$err_db = $rs;
 		}
@@ -61,8 +67,8 @@
 		}
 		
 	}
-	function insertUser($name,$uname,$email,$pass){
-		$query = "insert into users values (NULL,'$name','$uname','$email','$pass')";
+	function insertUser($fname,$lname,$uname,$email,$pass){
+		$query = "insert into users values (NULL,'$fname','$lname','$uname','$email','$pass')";
 		return execute($query);
 		
 	}
