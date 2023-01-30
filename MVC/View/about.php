@@ -2,13 +2,14 @@
 <html>
     <head>
         <h1 align="center">About</h1>
-        
+        <?php include 'slide_show_container/style.html'; ?>
     </head>
     <body bgcolor="#0E6EE8">
         <center>
-            <img src="F:\Data\OneDrive\Pictures\photo\shium 2.jpg" alt="X" height="160",width="160">
+            <!--img src="Images/shium 2.jpg" alt="X" height="160",width="160"-->
+            <?php include 'slide_show_container/container.html'; ?> 
             </center>
-            
+           
         <table>
             <tr>
                 <td ><h2> Personal information</h2>
