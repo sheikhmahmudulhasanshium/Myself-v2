@@ -5,7 +5,7 @@
         <?php include 'slide_show_container/style.html'; ?>
     </head>
     <body bgcolor="#0E6EE8">
-        <center>
+            <center>
             <!--img src="Images/shium 2.jpg" alt="X" height="160",width="160"-->
             <?php include 'slide_show_container/container.html'; ?> 
             </center>
