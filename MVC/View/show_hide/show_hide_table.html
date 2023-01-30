@@ -1,0 +1,56 @@
+<script> 
+   let primary_info = button => {
+     let element = document.getElementById("about_me");
+     let hidden = element.getAttribute("hidden");
+   
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "-";
+        
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "+";
+     }
+
+      
+   }
+   let address_info = button => {
+      element = document.getElementById("address");
+      hidden = element.getAttribute("hidden");
+   
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "-";
+        
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "+";
+     }
+   }
+   let academic_info = button => {
+      element = document.getElementById("academic");
+      hidden = element.getAttribute("hidden");
+   
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "-";
+        
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "+";
+     }
+   }
+   let interest_info = button => {
+      element = document.getElementById("interest");
+      hidden = element.getAttribute("hidden");
+   
+     if (hidden) {
+        element.removeAttribute("hidden");
+        button.innerText = "-";
+        
+     } else {
+        element.setAttribute("hidden", "hidden");
+        button.innerText = "+";
+     }
+   }
+ </script>

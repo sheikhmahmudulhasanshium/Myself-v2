@@ -13,74 +13,75 @@
         <table>
             <tr>
                 <td ><h2> Personal information</h2>
-                <!--<table hidden> for details https://www.dofactory.com/html/editor/table-hidden-toggle-->
-                      
-                    <table class="about",id="about_me" hidden>
-                    <tr>
-                        <td align="right"><b>Full Name:   </b></td>
-                        <td>Sheikh Mahmudul Hasan Shium</td>
+                
+<!--for more details go to https://www.dofactory.com/html/table/hidden#:~:text=The%20hidden%20attribute%20hides%20the,its%20position%20on%20the%20page.-->
+                    <table class="tb" id="about_me" >
+                        <tr>
+                            <td align="right"><b>Full Name:   </b></td>
+                            <td>Sheikh Mahmudul Hasan Shium</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Father's Name:   </b></td>
+                            <td>Sheikh Akram Uddin</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Mother's Name:   </b></td>
+                            <td>Sahida Sultana Hira</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Gender:   </b></td>
+                            <td>Male</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Blood Group:   </b></td>
+                            <td>A+</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Date of Birth:   </b></td>
+                            <td>24/12/2000</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Phone Number:   </b></td>
+                            <td>+8801729771453</td>
+                            
+                        </tr>
                         
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Father's Name:   </b></td>
-                        <td>Sheikh Akram Uddin</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Mother's Name:   </b></td>
-                        <td>Sahida Sultana Hira</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Gender:   </b></td>
-                        <td>Male</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Blood Group:   </b></td>
-                        <td>A+</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Date of Birth:   </b></td>
-                        <td>24/12/2000</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Phone Number:   </b></td>
-                        <td>+8801729771453</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        <td align="right"><b>Religion:   </b></td>
-                        <td>Islam</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Marital Status:   </b></td>
-                        <td>Unmarried</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Home District:   </b></td>
-                        <td>Khulna</td>
-                        
-                    </tr>
-                    <tr>
-                        <td align="right"><b>Nationality:   </b></td>
-                        <td>Bangladeshi</td>
-                        
-                    </tr>
+                        <tr>
+                            <td align="right"><b>Religion:   </b></td>
+                            <td>Islam</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Marital Status:   </b></td>
+                            <td>Unmarried</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Home District:   </b></td>
+                            <td>Khulna</td>
+                            
+                        </tr>
+                        <tr>
+                            <td align="right"><b>Nationality:   </b></td>
+                            <td>Bangladeshi</td>
+                            
+                        </tr>
                 </table>
-                  
+                <button onclick="primary_info(this);">-</button> 
+
                 </td>
             </tr>
             <tr>
                 <td><h2> 
                         Addresss
                 </h2>
-                     <table hidden>
+                     <table class="about" id="address" >
                         <tr>
                             <td align="right"><b> Present Address:  </b></Address></td>
                             <td>
@@ -103,13 +104,15 @@
                             </td>
                         </tr>
                     </table>
- 
+                <button onclick="address_info(this);">-</button> 
+                
+                </td>
                     </td>
             </tr>
             
             <tr>
                 <td><h2> Academic Qualification </h2>
-                    <table border="2" hidden>
+                    <table border="2" class="about" id="academic">
                         
                         <tr>
                             <td> 
@@ -180,6 +183,7 @@
                         </tr>
 
                     </table>
+                    <button onclick="academic_info(this);">-</button> 
                 </td>
             </tr>
 
@@ -188,7 +192,7 @@
                     <h2>
                         Personal Interest
                     </h2>
-                    <table hidden>
+                    <table id="interest" class="about">
                         <tr>
                             <td>
                                 <b>
@@ -197,7 +201,11 @@
                             </td>
                         </tr>
                     </table>
+                    <button onclick="interest_info(this);">-</button> 
                 </td>
             </tr>
         </table>
-        <?php include 'footer_all.php';?>        
+        
+        <?php include 'show_hide/show_hide_table.html'; ?>
+        <?php include 'footer_all.php';?>  
+              
