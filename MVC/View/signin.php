@@ -32,7 +32,7 @@
                         <input type="text" id="pass" name="pass" placeholder="Enter password here...." value="<?php echo $pass;?>"><br> 
                         <span class="warning"><?php echo $err_pass?><br></span>
 
-                        <label for="password">Confirm Password: </label><br>
+                        <label for="password">Re-Enter Password: </label><br>
                         <input type="text" id="c_password" name="c_password" placeholder="Confirm password here...." value="<?php echo $c_pass;?>"><br>
                         <span class="warning"><?php echo $err_c_pass?><br></span>
 

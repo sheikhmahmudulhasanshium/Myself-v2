@@ -15,7 +15,8 @@
 	$err_c_pass = "";
 	$err_db="";
 	$hasError=false;
-	
+	//visit https://www.guru99.com/php-regular-expressions.html#:~:text=preg_match()%20in%20PHP%20%E2%80%93%20this,a%20match%20is%20not%20found.&text=preg_replace()%20in%20PHP%20%E2%80%93%20this,match%20with%20the%20specified%20text.
+
 	if($_SERVER["REQUEST_METHOD"]=="POST")
 	{
 		//https://www.javatpoint.com/form-validation-in-php
@@ -110,9 +111,9 @@
 		{
 			$pass = input_validator($_POST["pass"]);
 			$length = strlen($pass);
-			if($length > 20 && $length < 7)
+			if($length < 8)
 			{
-				$err_pass = "Password must be atleast 8 character and atmost 20 character long";
+				$err_pass = "Password must be atleast 8 character long";
 			}
 			
 			//check special character
@@ -122,20 +123,38 @@
 			{
 				$err_pass="Password must contain a special character eg: !,~,&";
 			}
-			if(!preg_match("/^[A-Z]/",$pass))
+			if(!preg_match("~[A-Z]+~",$pass))
 			{
 			$err_pass = "Password must contain a Uppercase letter  eg: A, B";
 			}
-			if(!preg_match("/^[a-z]/",$pass))
+			if(!preg_match("~[a-z]+~",$pass))
 			{
 				$err_pass = "Password must contain a Lowercase letter  eg: a, b";
 			}
 			
-			if(!preg_match("/^[1-9]/",$pass))
+			if(!preg_match("~[0-9]+~",$pass))
 			{
 				$err_pass = "Password must contain a number";
 			}
+			if($length >20)
+			{
+				$err_pass = "Password must be atmost 20 character long";
+			}
 			
+		}
+		{
+			if(empty($_POST["c_pass"]))
+			{
+			$err_c_pass = "Password confirmation required.";
+			}
+			else{
+		$c_pass = input_validator($_POST["c_pass"]);
+			if($_POST["pass"]==$_POST["c_pass"])
+			{
+				$err_c_pass = "Password  matched.";
+			}
+			}
+
 		}
 	}
 	function input_validator($data)
